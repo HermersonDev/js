@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<input type="text" name="nome">
+		<button id="botao">Adicionar</button>
+		<ul></ul>
+
+		<script type="text/javascript">
+			//javascript DOM
+
+			//Exercício 3
+			var nomes = ['Diego', 'Gabriel', 'Lucas'];
+
+			var ulElement = document.querySelector('ul');
+
+			for (nome of nomes) {
+				var liElement = document.createElement('li');
+				var content = document.createTextNode(nome);
+				liElement.appendChild(content);
+				ulElement.appendChild(liElement);
+			}
+
+			
+			var btn = document.querySelector('#botao');
+
+			btn.onclick = function() {
+
+				var inputElement = document.querySelector('input[name=nome]');
+
+				var newLi = document.createElement('li');
+				var newContent = document.createTextNode(inputElement.value);
+				newLi.appendChild(newContent);
+
+				ulElement.appendChild(newLi);
+
+				inputElement.value = '';
+			}
+		</script>
+	</body>
+</html>

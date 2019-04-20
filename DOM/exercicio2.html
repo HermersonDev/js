@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<button id="botao">Criar Elemento</button>
+
+		<div id="container">
+			
+		</div>
+
+		<script type="text/javascript">
+			//javascript DOM
+
+			//Exercício 2
+
+			var btnElement = document.querySelector('#botao');
+			var containerElement = document.querySelector('#container');
+
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF';
+				var color = '#';
+				for(var h = 0; h < 3; h++) {
+					color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+
+
+			btnElement.onclick = function () {
+				var newElement = document.createElement('div');
+
+				newElement.style.height = '100px';
+				newElement.style.width = '100px';
+				newElement.style.margin = '10px';
+				newElement.style.backgroundColor = '#F00';
+				
+				newElement.onmouseover = function() {
+					this.style.backgroundColor = getRandomColor();
+				}
+
+				containerElement.appendChild(newElement);
+			}
+		</script>
+	</body>
+</html>

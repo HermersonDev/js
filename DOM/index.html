@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<div id="app">
+			<!-- <button onclick="mostrarAlerta()">Me pressione</button> -->
+			<!-- <button onmouseover="mostrarAlerta()">Me pressione</button> -->
+			<!-- <input onkeypress="mostrarAlerta()"> -->
+			<input type="text" name="nome" id="nome" class="nome">
+			<button class="botao">Adicionar</button>
+		</div>
+
+		<div id="git">
+		</div>
+
+		<div class="box">
+		</div>
+
+		<script type="text/javascript">
+			//javascript DOM
+			
+			//Envento Inline
+			function mostrarAlerta(){
+				alert('Olá!');
+			}
+
+			//DOM
+			var inputElement = document.getElementById('nome');
+
+			console.log(inputElement);
+
+			inputElement = document.getElementsByTagName('input')[0];
+
+			console.log(inputElement);
+
+			inputElement = document.getElementsByClassName('nome')[0];
+
+			console.log(inputElement);
+
+			inputElement = document.querySelector('body div#app input');
+
+			console.log(inputElement);
+
+			inputElement = document.querySelector('input[name=nome]');
+
+			console.log(inputElement);
+
+			var btnElement = document.querySelector('button.botao');
+
+			btnElement.onclick = function(){
+				var texto = inputElement.value;
+				alert(texto);
+			}
+
+			//Criado Elementos
+
+			var linkElement = document.createElement('a');
+			linkElement.setAttribute('href', 'http://github.com/HermersonDev');
+
+			var contentElement = document.createTextNode('Acesse meu GitHub :D');
+
+			linkElement.appendChild(contentElement);
+
+			var gitElement = document.querySelector('div#git');
+			gitElement.appendChild(linkElement);
+
+			var removeElement = document.querySelector('input.nome');
+
+			//Removendo Elementos
+			var appElement = document.querySelector('div#app');
+			appElement.removeChild(removeElement);
+
+
+			//Alterando Estilos
+
+			var boxElement = document.querySelector('.box');
+			boxElement.style.width = '100px';
+			boxElement.style.height = '100px';
+			boxElement.style.backgroundColor = '#F00';
+
+		</script>
+	</body>
+</html>
