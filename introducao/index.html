@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//javascript
+
+			//Variaveis
+			
+			
+			var nome = "hermerson";
+			var idade = 22;
+			var peso = 62.0;
+			var humano = true;
+		    
+		    var alunos = ['hermerson', 'joão', 'maria'];
+
+		    var aluno = {
+		   		nome: 'hermerson',
+		   		idade: 22,
+		   		peso: 62.0,
+		   		humano: true
+		    };
+
+		    console.log(nome)
+		    console.log(idade)
+		    console.log(peso)
+		    console.log(humano)
+		    console.log(alunos)
+		    console.log(aluno)
+		    
+
+		    
+		    var x = 10, y = 5;
+
+		    var resultado = x + y;
+		    console.log('Soma ', resultado);
+
+		    var resultado = x - y;
+		    console.log('Soma ', resultado);
+
+		    var resultado = x * y;
+		    console.log('Soma ', resultado);
+
+		    var resultado = x / y;
+		    console.log('Soma ', resultado);
+
+		    var resultado = x % y;
+		    console.log('Soma ', resultado);
+
+		    x += 7;
+		    console.log(x);
+
+		    x -= 7;
+		    console.log(x);
+
+		    x *= 7;
+		    console.log(x);
+
+		    x /= 7;
+		    console.log(x);
+
+		    x %= 7;
+		    console.log(x);
+		    
+
+		    //Funções
+		    
+		    
+		    function soma(numero1, numero2){
+
+		    	var resultado = numero1 + numero2;
+
+		    	return resultado;
+		    }
+
+		    console.log(soma(1, 2));
+			
+
+		    //Condicionais
+
+		    
+		    function retornaSexo(sexo){
+
+		    	//IF, ELSE IF, ELSE
+		 		if (sexo === 'M'){
+		 			return 'Masculino';
+		 		} else if (sexo === 'F'){
+		 			return 'Feminino';
+		 		} else {
+		 			return 'Outro';
+		 		}
+
+		 		// SWITCH CASE
+		 		switch (sexo) {
+		 			case 'M':
+		 				return 'Masculino';
+		 			case 'F':
+		 				return 'Feminino';
+		 			default:
+		 				return 'Outro';
+		 		}
+
+		    }
+
+		    console.log(retornaSexo('M'));
+		    
+
+		    //Operadores Lógicos
+
+		    
+		    var sexo = 'M', idade = 22;
+
+		    //AND
+		    if (sexo === 'M' && idade >= 18 ) {
+		    	console.log('OK');
+		    }
+
+		    //OR
+		    if (sexo === 'M' || idade <= 18 ) {
+		    	console.log('OK');
+		    }
+
+		    //NOT
+		    if (sexo !== 'F') {
+		    	console.log('OK');
+		    }
+
+		    if (sexo != 'F') {
+		    	console.log('Valor Ok');
+		    }
+		    
+
+		    //Condição Ternária
+		    
+		    
+		    var sexo = 'M';
+
+		    var genero = (sexo === 'M') ? 'Masculino' : 'Feminino';
+
+		    console.log(genero);
+			
+
+			//Estruturas de repetição
+
+			//For
+			
+			for (var i = 0; i <= 100; i++) {
+				console.log(i);
+			}
+
+			//While
+
+			
+			var h = 0;
+			while (j <= 100) {
+				console.log(j);
+				j++;
+			}
+
+			//Intervalo e Timeout
+
+			function exibeAlgo() {
+				console.log('Olá');
+			}
+
+			setInterval(exibeAlgo, 1000);
+
+			setTimeout(exibeAlgo, 5000);
+
+
+
+
+
+		</script>
+	</body>
+</html>

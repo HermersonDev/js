@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//javascript
+
+			//Exercício 5
+
+
+			function exibirHabilidades(usuarios){
+				for (item of usuarios) {
+					console.log("O " + item.nome + " possui as habilidades: " + item.habilidades.join(', ') + ".");
+				}
+			}
+
+			var usuarios = [
+				{
+					nome: "Diego",
+					habilidades: ["Javascript", "ReactJS" , "Redux"]
+				},
+				{
+					nome: "Gabriel",
+					habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+				}
+			];
+
+			exibirHabilidades(usuarios);
+		</script>
+	</body>
+</html>
