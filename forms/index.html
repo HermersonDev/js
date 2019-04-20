@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<form name="form">
+			<span id="erro"></span><br>
+			<input type="text" name="nome" placeholder="Nome(Apenas letras)">
+			<input type="number" name="numero" placeholder="Número">
+			<input type="submit" value="Enviar">
+		</form>
+
+		<script type="text/javascript">
+			//Validação de Formulário com Javascript
+
+			var formElement = document.querySelector('form[name=form]');
+			var erroElement = document.querySelector('span#erro');
+
+			erroElement.style.color = 'red';
+
+			//Função de validação dos campos
+			formElement.onsubmit = function() {
+
+				var inputNome = document.forms['form']['nome'].value;
+				
+				if (inputNome == "") {
+					erroElement.innerHTML = "O campo 'nome' é obrigatóro!";	
+					return false;
+				}
+
+				if (inputNome.length > 45) {
+					erroElement.innerHTML = "O campo 'nome' pode conter no maximo 45 caracteres";
+					return false;
+				}
+
+				var inputNumero = document.forms['form']['numero'].value;
+
+				if (isNaN(inputNumero)) {
+					erroElement.innerHTML = "O campo 'número' só pode conter números! ";
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+	</body>
+</html>
